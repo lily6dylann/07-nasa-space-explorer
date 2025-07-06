@@ -14,15 +14,32 @@
     </header>
 
     <div class="filters">
-      <input type="date" id="startDate" />
-      <input type="date" id="endDate" />
-      <button>Get Space Images</button>
+      <label for="start-date">Start Date:</label>
+      <input type="date" id="start-date">
+      <label for="end-date">End Date:</label>
+      <input type="date" id="end-date">
+      <button id="fetch-btn">Fetch APOD Images</button>
+    </div>
+
+    <div id="space-fact" class="space-fact">
+      <h2>Did You Know?</h2>
+      <p id="fact-text">Loading a random space fact...</p>
     </div>
 
     <div id="gallery" class="gallery">
       <div class="placeholder">
         <div class="placeholder-icon">🔭</div>
-        <p>Select a date range and click "Get Space Images" to explore the cosmos!</p>
+        <p class="placeholder-text">Select a date range and click "Fetch APOD Images" to explore the cosmos!</p>
+      </div>
+    </div>
+
+    <div id="modal" class="modal hidden">
+      <div class="modal-content">
+        <span id="close-modal" class="close-button">&times;</span>
+        <img id="modal-image" src="" alt="Space Image" class="modal-image">
+        <h2 id="modal-title"></h2>
+        <p id="modal-date"></p>
+        <p id="modal-explanation"></p>
       </div>
     </div>
   </div>
